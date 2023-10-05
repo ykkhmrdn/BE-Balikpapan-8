@@ -4,7 +4,7 @@ const formController = require('../controllers/formController')
 
 
 
-formRoute.get('/', formController.getAllForm)
+formRoute.get('/dataform', formController.getAllForm)
 formRoute.post('/index', formController.createForm)
 
 
