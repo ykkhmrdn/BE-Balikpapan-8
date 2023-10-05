@@ -18,7 +18,7 @@ app.use("/", productRoute)
 // rute untuk form
 app.use("/", formRoute )
 // rute untuk about
-app.use("/about", aboutRoute)
+app.use("/", aboutRoute)
 
 
 
