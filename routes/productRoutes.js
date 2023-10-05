@@ -8,6 +8,4 @@ productRoute.get('/views/detail-products.html', productController.getProductById
 
 
 
-
-
 module.exports = { productRoute }

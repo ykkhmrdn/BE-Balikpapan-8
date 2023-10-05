@@ -14,11 +14,11 @@ const getAllProduct = async () => {
 }
 
 //Get by Id
-async function getProductById(byId) {
+async function getProductById(productId) {
     try {
       const product = await prisma.products.findUnique({
         where: {
-          id: parseInt(byId) 
+          id: parseInt(productId) 
         }
       })
       return product
