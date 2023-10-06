@@ -9,5 +9,4 @@ productRoute.get('/views/productsByType', productController.getProductsByType);
 
 
 
-
 module.exports = { productRoute }

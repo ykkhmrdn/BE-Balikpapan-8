@@ -39,6 +39,7 @@ const getProductsByType = async (req, res) => {
   try {
     const products = await productService.getProductsByType(type);
     res.status(200).json({
+      message: 'Successfully fetched products by type',
       data: products,
     });
   } catch (error) {

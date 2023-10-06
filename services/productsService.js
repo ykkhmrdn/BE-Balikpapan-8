@@ -28,7 +28,6 @@ async function getProductById(productId) {
     
   }
 
-
 // Get products by type
 const getProductsByType = async (type) => {
   try {
