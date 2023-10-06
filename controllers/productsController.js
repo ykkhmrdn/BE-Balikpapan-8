@@ -33,6 +33,7 @@ const getProductById = async (request, res) => {
   }
 };
 
+
 // Get products by type
 const getProductsByType = async (req, res) => {
   const { type } = req.query;
@@ -48,4 +49,9 @@ const getProductsByType = async (req, res) => {
   }
 };
 
- module.exports = { getAllProduct, getProductById, getProductsByType }
+// Render products HTML
+const renderProductsHTML = (req, res) => {
+  res.sendFile(path.join(__dirname, '../views/products.html'));
+};
+
+ module.exports = { getAllProduct, getProductById, getProductsByType, renderProductsHTML }
