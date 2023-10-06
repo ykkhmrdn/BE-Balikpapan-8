@@ -2,7 +2,7 @@
 
 # RobinCode - E-commerce Thrift Fashion
 
-Selamat datang di repository proyek "RobinCode"! Kami adalah tim kreatif dari Section Balikpapan Group 8 yang berkomitmen untuk menciptakan pengalaman belanja e-commerce thrift fashion yang luar biasa.
+Selamat datang di repositori proyek "RobinCode"! Kami adalah tim kreatif dari Section Balikpapan Group 8 yang berkomitmen untuk menciptakan pengalaman belanja e-commerce thrift fashion yang luar biasa.
 
 ![Logo-RobinCode](https://github.com/Kampus-Merdeka-Software-Engineering/front-end-capstone-project-section-balikpapan-group-8/assets/113696252/0032bcfc-303f-4fdd-a9a2-a94a40583678)
 
