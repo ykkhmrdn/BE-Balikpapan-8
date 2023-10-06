@@ -33,4 +33,18 @@ const getProductById = async (request, res) => {
   }
 };
 
- module.exports = { getAllProduct, getProductById }
+// Get products by type
+const getProductsByType = async (req, res) => {
+  const { type } = req.query;
+  try {
+    const products = await productService.getProductsByType(type);
+    res.status(200).json({
+      data: products,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
+ module.exports = { getAllProduct, getProductById, getProductsByType }
