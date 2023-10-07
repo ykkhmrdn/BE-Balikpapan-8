@@ -8,8 +8,6 @@ productRoute.get('/views/detail-products.html', productController.getProductById
 productRoute.get('/views/productsByType', productController.getProductsByType);
 productRoute.get('/views/renderProductsHTML', productController.renderProductsHTML);
 
-productRoute.get('/views/productsByName/:name', productController.getProductsByName);
-productRoute.get('/views/productsByType/:type', productController.getProductsByType2);
 
 
 
