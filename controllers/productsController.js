@@ -48,7 +48,7 @@ const getProductsByType = async (req, res) => {
 
 // Render products HTML
 const renderProductsHTML = (req, res) => {
-  res.sendFile(path.join(__dirname, '../views/products.html'));
+  res.sendFile(path.join(__dirname, '/products.html'));
 };
 
 module.exports = {
