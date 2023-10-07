@@ -32,5 +32,55 @@ const getProductById = async (request, res) => {
      res.status(500).json({ error: 'Internal server error' });
    }
  };
+// Get products by type
+const getProductsByType = async (req, res) => {
+  const { type } = req.query;
+  try {
+    const products = await productService.getProductsByType(type);
+    res.status(200).json({
+      message: 'Successfully fetched products by type',
+      data: products,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
 
- module.exports = { getAllProduct, getProductById }
+// Get products by Name
+const getProductsByName = async (req, res) => {
+  const { name } = req.params;
+  try {
+    const products = await productService.getProductsByName(name);
+    res.status(200).json({
+      message: 'Successfully fetched products by type',
+      data: products,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
+
+// Get products by type2
+const getProductsByType2 = async (req, res) => {
+  const { type } = req.params;
+  try {
+    const products = await productService.getProductsByType2(type);
+    res.status(200).json({
+      message: 'Successfully fetched products by type',
+      data: products,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
+// Render products HTML
+const renderProductsHTML = (req, res) => {
+  res.sendFile(path.join(__dirname, '../views/products.html'));
+};
+
+ module.exports = { getAllProduct, getProductById, getProductsByType, renderProductsHTML, getProductsByName, getProductsByType2}

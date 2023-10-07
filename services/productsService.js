@@ -14,11 +14,11 @@ const getAllProduct = async () => {
 }
 
 //Get by Id
-async function getProductById(byId) {
+async function getProductById(productId) {
     try {
       const product = await prisma.products.findUnique({
         where: {
-          id: parseInt(byId) 
+          id: parseInt(productId) 
         }
       })
       return product
@@ -27,8 +27,51 @@ async function getProductById(byId) {
     }
     
   }
-
   
+// Get products by type
+  const getProductsByType = async (type) => {
+    try {
+      const products = await prisma.products.findMany({
+        where: {
+          product_type: type,
+        },
+      });
+      return products;
+    } catch (error) {
+      console.error(error);
+      throw new Error('Error getting products by type');
+    }
+  };
+
+  // Get products by type
+  const getProductsByName = async (name) => {
+    try {
+      const products = await prisma.products.findMany({
+        where: {
+          name: String(name),
+        },
+      });
+      return products;
+    } catch (error) {
+      console.error(error);
+      throw new Error('Error getting products by type');
+    }
+  };
+
+// Get products by type
+const getProductsByType2 = async (type) => {
+  try {
+    const products = await prisma.products.findMany({
+      where: {
+        product_type: String(type),
+      },
+    });
+    return products;
+  } catch (error) {
+    console.error(error);
+    throw new Error('Error getting products by type');
+  }
+};
 
 
-module.exports = { getAllProduct, getProductById }
+module.exports = { getAllProduct, getProductById, getProductsByType, getProductsByName, getProductsByType2}
