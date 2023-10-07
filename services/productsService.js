@@ -28,7 +28,21 @@ async function getProductById(productId) {
     
   }
 
-  
+// Get products by type
+const getProductsByType = async (type) => {
+  try {
+    const products = await prisma.products.findMany({
+      where: {
+        product_type: type,
+        },
+      });
+      return products;
+    } catch (error) {
+      console.error(error);
+      throw new Error('Error getting products by type');
+    }
+  };
 
 
-module.exports = { getAllProduct, getProductById }
+
+module.exports = { getAllProduct, getProductById, getProductsByType }
