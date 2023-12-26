@@ -3,7 +3,7 @@ const express = require('express');
 const { productRoute } = require('./routes/productRoutes')
 const { formRoute } = require('./routes/formRoutes')
 const { aboutRoute } = require('./routes/aboutRoutes')
-// const { pool } = require('./config/databases')
+const { pool } = require('./config/databases')
 const cors = require('cors')
 
 const app = express();
@@ -24,4 +24,9 @@ app.use("/", aboutRoute)
 
 app.listen(PORT, () => {
     console.log(`server is running on http://localhost:${PORT}`);
+})
+
+pool.getConnection((err, connection) => {
+    if (err) throw err;
+    console.log("Connected to database");
 })
