@@ -40,7 +40,7 @@ INSERT INTO PRODUCTS VALUES(
 
 
 --Create table About
-CREATE TABLE IF NOT EXISTS teams(
+CREATE TABLE IF NOT EXISTS members(
  id CHAR(3) NOT NULL PRIMARY KEY,
  name VARCHAR(255) NOT NULL,
  role VARCHAR(255) NOT NULL,
@@ -51,19 +51,19 @@ CREATE TABLE IF NOT EXISTS teams(
 );
 
 --Insert Value About
-INSERT INTO teams VALUES(
+INSERT INTO members VALUES(
 01, "Diana", "Quality Assurance", "https://www.instagram.com/dianamsrh", "https://www.linkedin.com/in/diana-masruroh", "https://github.com/dianamsrh", "https://i.ibb.co/3rt4hBt/diana.jpg");
 
-INSERT INTO teams VALUES(
-02, "Yoko", "Front End Engineer", "https://www.instagram.com/zyxkoo", "https://www.linkedin.com/in/yoko-khmrdn", "https://github.com/ykkhmrdn", "https://i.ibb.co/BPvj4VV/yoko.jpg ");
+INSERT INTO members VALUES(
+02, "Yoko", "Front End Engineer", "https://www.instagram.com/zyxkoo", "https://www.linkedin.com/in/yoko-khmrdn", "https://github.com/ykkhmrdn", "https://i.ibb.co/xMGnPQ5/yoko.png");
 
-INSERT INTO teams VALUES(
+INSERT INTO members VALUES(
 03, "Septi", "Quality Assurance", "https://www.instagram.com/septianaanf", "https://www.linkedin.com/in/septiana-aulia-nur-fadlina-b72564284", "https://github.com/septianaanf", "https://i.ibb.co/fQ8zdJ2/septi.jpg ");
 
-INSERT INTO teams VALUES(
+INSERT INTO members VALUES(
 04, "Prada", "Back End Engineer", "https://www.instagram.com/pradadipa", "https://www.linkedin.com/in/prada-dipa-0142842104", "https://github.com/pradadipa", "https://i.ibb.co/X3pfkZh/prada.png");
 
-INSERT INTO teams VALUES(
+INSERT INTO members VALUES(
 05, "Hilda", "Back End Engineer", "https://www.instagram.com/hilwoody", "https://www.linkedin.com/in/hildaayumeylia", "https://github.com/myhilda", "https://i.ibb.co/5sH1PKM/hilda.jpg");
 
 
